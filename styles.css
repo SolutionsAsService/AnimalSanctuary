@@ -273,3 +273,53 @@ form input[type="submit"]:hover {
         grid-template-columns: 1fr;
     }
 }
+
+#about-people {
+    padding-top: 80px;
+}
+
+.people-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.people-gallery .people-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.people-gallery .people-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.people-gallery .people-card h3 {
+    color: #6a994e;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.people-gallery .people-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Add responsive grid for smaller screens */
+@media (max-width: 768px) {
+    .people-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .people-gallery {
+        grid-template-columns: 1fr;
+    }
+}
