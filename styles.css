@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Merriweather', serif, 'Helvetica Neue', sans-serif;
-    background-color: #f2f6f7;
+    background-color: #f4e1d2; /* Warm desert tone */
     color: #333;
     height: 100vh;
     display: flex;
@@ -18,11 +18,19 @@ body {
     overflow-x: hidden;
 }
 
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 /* Header and Navigation */
 header {
     width: 100%;
-    padding: 30px 0;
-    background-color: #6a994e; /* Earthy green */
+    padding: 20px 0;
+    background-color: #a0522d; /* Earthy brown */
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -42,7 +50,7 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 nav ul {
@@ -51,7 +59,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 25px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -65,23 +73,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f7c59f; /* Soft yellow */
+    color: #ffcc80; /* Soft orange */
 }
 
 /* Main Content */
 main {
-    margin-top: 130px; /* to prevent overlap with fixed header */
+    margin-top: 120px; /* to prevent overlap with fixed header */
     padding: 40px 0;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     text-align: center;
 }
 
 h2 {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
-    color: #6a994e;
+    color: #a0522d;
     margin-bottom: 20px;
 }
 
@@ -92,13 +98,12 @@ p {
     margin-bottom: 40px;
 }
 
-section {
-    padding: 20px 0;
-    max-width: 1200px;
-    width: 100%;
+/* Section Containers */
+.section {
+    padding: 40px 0;
 }
 
-#pets, #people {
+#pets, #people, #contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
@@ -106,7 +111,7 @@ section {
     margin-top: 40px;
 }
 
-.pets-card, .people-card {
+.card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -115,7 +120,7 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.pets-card img, .people-card img {
+.card img {
     width: 100%;
     height: auto;
     max-width: 300px;
@@ -123,24 +128,18 @@ section {
     margin-bottom: 20px;
 }
 
-.pets-card h3, .people-card h3 {
+.card h3 {
     font-family: 'Merriweather', serif;
     font-size: 1.4rem;
-    color: #6a994e;
+    color: #a0522d;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 
-.pets-card p, .people-card p {
+.card p {
     font-size: 1rem;
     color: #555;
     margin-bottom: 10px;
-}
-
-/* Hover Effect */
-.pets-card:hover, .people-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(106, 153, 78, 0.3);
 }
 
 /* Footer */
@@ -148,18 +147,18 @@ footer {
     margin-top: 50px;
     padding: 20px;
     text-align: center;
-    background-color: #6a994e;
+    background-color: #a0522d;
     color: white;
     width: 100%;
     font-size: 1rem;
 }
 
-/* Button */
+/* Buttons */
 .button {
     padding: 12px 30px;
     font-size: 1.1rem;
     color: #fff;
-    background-color: #f7c59f; /* Soft yellow */
+    background-color: #ffcc80; /* Soft orange */
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -169,36 +168,7 @@ footer {
 }
 
 .button:hover {
-    background-color: #c5975c; /* Darker yellow */
-}
-
-/* Contact Form */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form input[type="submit"] {
-    background-color: #6a994e;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #f7c59f;
+    background-color: #e69540; /* Darker orange */
 }
 
 /* Responsive Design */
@@ -212,149 +182,13 @@ form input[type="submit"]:hover {
         margin: 5px 0;
     }
 
-    #pets, #people {
+    #pets, #people, #contact {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media (max-width: 480px) {
-    #pets, #people {
+    #pets, #people, #contact {
         grid-template-columns: 1fr;
     }
 }
-
-/* About Pets Page */
-#about-pets {
-    padding-top: 80px; /* Ensure there's space below the header */
-}
-
-.pets-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.pets-gallery .pets-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.pets-gallery .pets-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.pets-gallery .pets-card h3 {
-    color: #6a994e;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.pets-gallery .pets-card p {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Add responsive grid for smaller screens */
-@media (max-width: 768px) {
-    .pets-gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .pets-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-#about-people {
-    padding-top: 80px;
-}
-
-.people-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.people-gallery .people-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.people-gallery .people-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.people-gallery .people-card h3 {
-    color: #6a994e;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.people-gallery .people-card p {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Add responsive grid for smaller screens */
-@media (max-width: 768px) {
-    .people-gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .people-gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Contact Page */
-#contact {
-    padding-top: 80px;
-    text-align: center;
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form input[type="submit"] {
-    background-color: #6a994e;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="submit"]:hover {
-    background-color: #f7c59f;
-}
-
