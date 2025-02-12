@@ -1,194 +1,197 @@
-/* General reset */
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body with a light gradient background */
 body {
-    font-family: 'Merriweather', serif, 'Helvetica Neue', sans-serif;
-    background-color: #f4e1d2; /* Warm desert tone */
-    color: #333;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 20px;
-    overflow-x: hidden;
+  font-family: 'Merriweather', serif, 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #f9f7f3, #f4e1d2);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  overflow-x: hidden;
 }
 
 /* Container Styling */
 .container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Header and Navigation */
 header {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #a0522d; /* Earthy brown */
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  width: 100%;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #f0a07a, #f2b88d);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 header h1 {
-    font-family: 'Merriweather', serif;
-    text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    color: #fff;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ffcc80; /* Soft orange */
+  color: #ffcc80; /* Soft orange on hover */
 }
 
 /* Main Content */
 main {
-    margin-top: 120px; /* to prevent overlap with fixed header */
-    padding: 40px 0;
-    width: 100%;
-    text-align: center;
+  margin-top: 120px; /* Prevent overlap with fixed header */
+  padding: 40px 0;
+  width: 100%;
+  text-align: center;
 }
 
+/* Section Headings */
 h2 {
-    font-family: 'Merriweather', serif;
-    font-size: 2rem;
-    color: #a0522d;
-    margin-bottom: 20px;
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  color: #a0522d;
+  margin-bottom: 20px;
 }
 
+/* Paragraph Styling */
 p {
-    font-size: 1.1rem;
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
 }
 
 /* Section Containers */
 .section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
+/* Grid Layout for Cards (if used) */
 #pets, #people, #contact {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    padding: 20px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  margin-top: 40px;
 }
 
+/* Card Styling */
 .card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-    font-family: 'Merriweather', serif;
-    font-size: 1.4rem;
-    color: #a0522d;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+  color: #a0522d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    background-color: #a0522d;
-    color: white;
-    width: 100%;
-    font-size: 1rem;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f2b88d, #f0a07a);
+  color: #fff;
+  width: 100%;
+  font-size: 1rem;
 }
 
-/* Buttons */
+/* Button Styling */
 .button {
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #ffcc80; /* Soft orange */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #ffcc80; /* Soft orange */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #e69540; /* Darker orange */
+  background-color: #e69540; /* Darker orange on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-
-    #pets, #people, #contact {
-        grid-template-columns: 1fr 1fr;
-    }
+  nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  nav ul li {
+    margin: 5px 0;
+  }
+  
+  #pets, #people, #contact {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 480px) {
-    #pets, #people, #contact {
-        grid-template-columns: 1fr;
-    }
+  #pets, #people, #contact {
+    grid-template-columns: 1fr;
+  }
 }
