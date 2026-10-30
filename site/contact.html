@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact · Mesa Animal Rescue</title>
+  <meta name="description" content="Ask about adopting, fostering or volunteering at Mesa Animal Rescue, or visit us in Mesa, Arizona." />
+  <meta name="theme-color" content="#2E4A47" />
+  <meta property="og:title" content="Contact · Mesa Animal Rescue" />
+  <meta property="og:description" content="Ask about adopting, fostering or volunteering at Mesa Animal Rescue, or visit us in Mesa, Arizona." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Mesa Animal Rescue, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#C8643B" />
+          <path d="M5 27h7l3-6h10l3 6h7" fill="none" stroke="#F8EFE2" stroke-width="2.2" stroke-linejoin="round" />
+          <ellipse cx="20" cy="17" rx="3.4" ry="2.8" fill="#F8EFE2" />
+          <circle cx="14.6" cy="12.6" r="1.8" fill="#F8EFE2" /><circle cx="18.2" cy="10" r="1.8" fill="#F8EFE2" />
+          <circle cx="21.8" cy="10" r="1.8" fill="#F8EFE2" /><circle cx="25.4" cy="12.6" r="1.8" fill="#F8EFE2" />
+        </svg>
+        <span class="brand-name">Mesa Animal Rescue<small>Mesa, Arizona</small></span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="adopt.html">Adopt</a>
+        <a href="foster.html">Foster</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn btn-sm" href="give.html">Give</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>Ask us anything.</h1>
+        <p class="lede">About an animal, fostering, volunteering or something else. We reply within two days.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap contact-grid">
+        <form id="ask-form" class="form" action="mailto:hello@mesarescue.example" method="post" enctype="text/plain" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" autocomplete="name" required data-name="your name" />
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required data-name="email" />
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="f-about">About</label>
+            <select id="f-about" name="about">
+              <option>Something else</option>
+              <option>Max</option>
+              <option>Oliver</option>
+              <option>Thumper</option>
+              <option>Fluffy</option>
+              <option>Rex</option>
+              <option>Juniper</option>
+              <option>Fostering</option>
+              <option>Volunteering</option>
+            </select>
+          </div>
+          <div class="field field-wide">
+            <label for="f-message">Your message</label>
+            <textarea id="f-message" name="message" rows="5" required data-name="your message"></textarea>
+          </div>
+          <p class="field-wide"><button class="btn" type="submit">Send</button></p>
+          <p class="status field-wide" role="status" hidden></p>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Visit</h2>
+          <p>2210 E. Brown Road<br />Mesa, AZ 85213</p>
+          <p>Wednesday to Sunday, 11 am to 5 pm. Closed Monday and Tuesday.</p>
+          <p><a href="tel:+14805550179">(480) 555-0179</a><br /><a href="mailto:hello@mesarescue.example">hello@mesarescue.example</a></p>
+          <p class="warn"><strong>Found a stray or injured animal?</strong> Call Maricopa County Animal Care first. We can't take animals in without an appointment.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Mesa Animal Rescue</p>
+          <p>Rescue, care and rehoming for cats, dogs and rabbits in the East Valley.</p>
+        </div>
+        <div>
+          <p class="footer-h">Help</p>
+          <ul>
+            <li><a href="adopt.html">Adopt</a></li>
+            <li><a href="foster.html">Foster</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="give.html">Give</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Visit</p>
+          <p>2210 E. Brown Road<br />Mesa, AZ 85213</p>
+          <p>Wed – Sun, 11 am – 5 pm</p>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <p><a href="tel:+14805550179">(480) 555-0179</a><br /><a href="mailto:hello@mesarescue.example">hello@mesarescue.example</a></p>
+        </div>
+      </div>
+      <p class="fine">Mesa Animal Rescue is a concept website: its animals, people and address are illustrative, and no adoptions or donations are taken here. © <span data-year>2026</span> Mesa Animal Rescue.</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js" defer></script>
+</body>
+</html>

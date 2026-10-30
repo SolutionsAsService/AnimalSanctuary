@@ -1,0 +1,58 @@
+title: Contact · Mesa Animal Rescue
+description: Ask about adopting, fostering or volunteering at Mesa Animal Rescue, or visit us in Mesa, Arizona.
+nav: contact
+---
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>Ask us anything.</h1>
+        <p class="lede">About an animal, fostering, volunteering or something else. We reply within two days.</p>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap contact-grid">
+        <form id="ask-form" class="form" action="mailto:hello@mesarescue.example" method="post" enctype="text/plain" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" autocomplete="name" required data-name="your name" />
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required data-name="email" />
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="f-about">About</label>
+            <select id="f-about" name="about">
+              <option>Something else</option>
+              <option>Max</option>
+              <option>Oliver</option>
+              <option>Thumper</option>
+              <option>Fluffy</option>
+              <option>Rex</option>
+              <option>Juniper</option>
+              <option>Fostering</option>
+              <option>Volunteering</option>
+            </select>
+          </div>
+          <div class="field field-wide">
+            <label for="f-message">Your message</label>
+            <textarea id="f-message" name="message" rows="5" required data-name="your message"></textarea>
+          </div>
+          <p class="field-wide"><button class="btn" type="submit">Send</button></p>
+          <p class="status field-wide" role="status" hidden></p>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Visit</h2>
+          <p>2210 E. Brown Road<br />Mesa, AZ 85213</p>
+          <p>Wednesday to Sunday, 11 am to 5 pm. Closed Monday and Tuesday.</p>
+          <p><a href="tel:+14805550179">(480) 555-0179</a><br /><a href="mailto:hello@mesarescue.example">hello@mesarescue.example</a></p>
+          <p class="warn"><strong>Found a stray or injured animal?</strong> Call Maricopa County Animal Care first. We can't take animals in without an appointment.</p>
+        </aside>
+      </div>
+    </section>
